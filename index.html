@@ -1,97 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
         <header>
-          <h1>Yoann Croguennec</h1>
-          <p>Étudiant en BUT Informatique | Développeur Junior</p>
+            <h1>Yoann Croguennec</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
         </header>
-      
-        <nav>
-          <a href="#competences">Compétences</a>
-          <a href="#projets">Projets</a>
-          <a href="#parcours">Parcours</a>
-          <a href="#loisirs">Loisirs</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      
-        <section id="competences">
-          <h2>Compétences</h2>
-          <div class="skills">
-            <span>C</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>SQL</span>
-            <span>VSC</span>
-            <span>GitHub</span>
-          </div>
-        </section>
-      
-        <section id="projets">
-          <h2>Projets</h2>
-          <div class="project">
-            <h3>Jeu Snake</h3>
-            <p>Développé en C avec Visual Studio Code. Conception d'un gameplay structuré.</p>
-          </div>
-          <div class="project">
-            <h3>Développement Web</h3>
-            <p>HTML/CSS avec gestion de version sur GitHub. Collaboration en équipe.</p>
-          </div>
-        </section>
-      
-        <section id="parcours">
-          <h2>Parcours</h2>
-          <div class="education">
-            <h3>BUT Informatique - IUT Lannion (2024 - aujourd'hui)</h3>
-          </div>
-          <div class="education">
-            <h3>Baccalauréat Général - Lycée Kreisker (2024)</h3>
-            <p>Spécialités : Mathématiques, NSI | Option : Maths expertes</p>
-          </div>
-          <div class="experience">
-            <h3>Opérateur - Meralliance (2024)</h3>
-            <p>2 mois en agroalimentaire : production et approvisionnement.</p>
-          </div>
-          <div class="experience">
-            <h3>Stage d'observation - Chauffage Landivisien (2020)</h3>
-            <p>Découverte de l'électricité et plomberie sur chantier.</p>
-          </div>
-        </section>
-      
-        <section id="loisirs">
-          <h2>Loisirs</h2>
-          <div class="hobby">
-            <h3>Rugby</h3>
-            <p>6 ans - Rugby Club Landivisiau</p>
-          </div>
-          <div class="hobby">
-            <h3>Tennis</h3>
-            <p>2 ans - Lampaul Guimiliau Tennis Club</p>
-          </div>
-          <div class="hobby">
-            <h3>Pêche en rivière</h3>
-            <p>Membre de la Fédération du Finistère pour la Pêche (AAPPMA)</p>
-          </div>
-        </section>
-      
-        <section id="contact">
-          <h2>Contact</h2>
-          <div class="contact">
-            <p>📧 yoann.croguennec.tr@gmail.com</p>
-            <p>📞 07 85 50 12 00</p>
-            <p>📍 8 Restvez, 29400 Guimiliau</p>
-          </div>
-        </section>
-      
+
+        <main>
+            <section>
+                <div>
+                    <div>
+                        <h2>A propos de moi</h2>
+                        <p>
+                            Je suis un développeur logiciel à la recherche d'une alternance.<br>
+                            J'aime apprendre de nouvelles technologies et relever des défis.
+                        </p>
+                    </div>
+                    <img src="image/yoann.jpg" alt="Yoann Croguennec">
+                </div>
+            </section>
+        </main>
         <footer>
-          <p>&copy; 2025 Yoann Croguennec. Tous droits réservés.</p>
+            <p>&copy; 2025 Yoann Croguennec. Tous droits réservés.</p>
         </footer>
-    </body>      
+
+        <script>
+            window.addEventListener("scroll", function () {
+                const header = document.querySelector("header");
+                if (window.scrollY > 0) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        </script>
+    </body>
 </html>

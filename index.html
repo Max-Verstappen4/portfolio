@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <h2>Portfolio</h2>
 
-        <header>
-            <h1>Yoann Croguennec</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-        </header>
+        <div class="burger" id="burger">&#9776;</div>
 
-        <main>
-            <section>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Formation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section>
+            <div>
                 <div>
-                    <div>
-                        <h2>A propos de moi</h2>
-                        <p>
-                            Je suis un développeur logiciel à la recherche d'une alternance.<br>
-                            J'aime apprendre de nouvelles technologies et relever des défis.
-                        </p>
-                    </div>
-                    <img src="image/yoann.jpg" alt="Yoann Croguennec">
+                    <h1>A propos de moi</h1>
+                    <p>
+                        Je suis un développeur logiciel à la recherche <br>d'une alternance.
+                        J'aime apprendre de nouvelles technologies <br>et relever des défis.
+                    </p>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Yoann Croguennec. Tous droits réservés.</p>
-        </footer>
+                <img src="image/yoann.jpg" alt="Yoann Croguennec">
+            </div>
+        </section>
 
-        <script>
+        <section>
+            <div>
+                <h2>Formation</h2>
+                <p>
+                    Je suis actuellement en 1er BUT informatique à l'IUT de Lannion en développement informatique.<br>
+                    J'ai effectué un BAC général au lycée du Kreisker à St-Pol-de-Léon <br>
+                    avec les spécialités Mathématiques et NSI, ainsi que de l'option Maths expertes.<br>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Yoann Croguennec. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const background = document.querySelector(".background");
+            const burger = document.getElementById("burger");
+            const nav = document.getElementById("nav");
+
+            // Scroll - changer couleur du bandeau
             window.addEventListener("scroll", function () {
-                const header = document.querySelector("header");
                 if (window.scrollY > 0) {
-                    header.classList.add("scrolled");
+                    background.classList.add("scrolled");
                 } else {
-                    header.classList.remove("scrolled");
+                    background.classList.remove("scrolled");
                 }
             });
-        </script>
-    </body>
+
+            // Menu burger toggle avec rotation et animation
+            if (burger && nav) {
+                burger.addEventListener("click", () => {
+                    const ul = nav.querySelector("ul");
+                    if (ul) {
+                        ul.classList.toggle("active");
+                        burger.classList.toggle("rotated");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>

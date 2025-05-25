@@ -80,29 +80,63 @@ footer {
 }
 
 section > div {
+    flex-direction: column;
+}
+
+section {
+    margin: 4rem 50px 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 0 50px 0;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin: 0 0 30px 0;
+}
+
+section p{
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+main ul{
+    list-style: none;
+}
+
+li > ul{
+    list-style: disc;
+    margin-left: 2.5em;
+    margin-bottom: 50px;
+}
+
+main > section > div {
     display: flex;
     gap: 10px;
     align-items: flex-start;
     width: 80%;
     margin: 4rem 50px 0 20px;
+    flex-direction: row;
 }
 
-section > div > div {
+main > section > div > div {
     flex: 1;
 }
 
-section h1 {
+main > section h1 {
     margin: 0 0 10px 0;
     font-size: 3.5rem;
 }
 
-section p {
+main > section p {
     margin: 0;
     line-height: 1.5;
     font-size: 1.2rem;
 }
 
-section img {
+main > section img {
     width: 500px;
     height: auto;
     border-radius: 15px;
@@ -112,9 +146,12 @@ section img {
     margin-left: 0;
 }
 
-section img:hover {
+main > section img:hover {
     transform: scale(1.05);
 }
+
+
+
 
 .burger {
     display: none;

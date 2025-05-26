@@ -14,6 +14,21 @@ li a {
     transition: transform 0.4s ease, color 0.3s ease;
 }
 
+p a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact > div{
+    display: flex;
+    flex-direction: column;
+}
+
+p a:hover {
+    color: #000000;
+}
+
 li a:hover {
     transform: scale(1.3);
     color: #000000;
@@ -76,7 +91,7 @@ footer {
     padding: 10px;
     text-align: center;
     bottom: 0;
-    width: 100%;
+    width: auto;
 }
 
 section > div {
@@ -84,7 +99,7 @@ section > div {
 }
 
 section {
-    margin: 4rem 50px 0 20px;
+    margin: 4rem 0 0 20px;
 }
 
 h2 {

@@ -49,10 +49,17 @@ section div article:last-child{
 }
 
 section > article{
+    background-color: white;
+    color : black;
     text-align: center;
     width: 10%;
     border: 1px solid rgb(44, 43, 43);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
 
+section > article:hover{
+    background-color: black;
+    color: white;
 }
 
 

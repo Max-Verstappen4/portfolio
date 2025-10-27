@@ -50,6 +50,11 @@ section div article:first-child{
 
 }
 
+section div > div article{
+    width: 100% !important;
+    display: inline-block;
+}
+
 a{
     color: black;
     text-decoration: none;
@@ -71,12 +76,20 @@ section > a >article:hover{
     color: white;
 }
 
+article ul{
+    padding: 0;
+    margin: 0;
+}
+
 ul li{
     list-style: none;
+}
+
+ul li a{
     text-decoration: none;
 }
 
-ul li:hover{
+ul li a:hover{
     text-decoration: underline;
 }
 

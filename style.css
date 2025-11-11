@@ -44,7 +44,7 @@ section div{
 }
 
 section div article:first-child{
-    width: 15%;
+    width: 30%;
     border-radius: 15px;
     padding : 0 0 20px 0;
 
@@ -109,9 +109,6 @@ footer ul li{
     margin: 0 0px 15px 30px;
 }
 
-/*
- ANIMATION BACKGROUND
-*/
 
 #background{
     position: fixed;

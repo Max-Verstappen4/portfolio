@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+
 html, body{
     height: 100%;
     margin: 0;
-    font-family: monospace;
+    font-family: "IBM Plex Sans", "Segoe UI", Tahoma, sans-serif;
     position: relative;
 }
 
@@ -43,11 +46,53 @@ section div{
     margin-bottom: 2rem;
 }
 
-section div article:first-child{
+section > div > article:first-child{
     width: 30%;
     border-radius: 15px;
     padding : 0 0 20px 0;
+    line-height: 1.5;
 
+}
+
+#projet{
+    max-height: 400px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    padding-bottom: 320px;
+    scroll-padding-bottom: 320px;
+}
+#projet::-webkit-scrollbar{
+    display: none;
+}
+
+#projet > h2{
+    margin: 10px 0;
+    color: #212121d8;
+    scroll-margin-top: 12px;
+    scroll-snap-align: start;
+}
+
+#projet > h2.selectione{
+    margin: 0 0 0 25px;
+    color: #000000;
+    font-size: 1.9em;
+    cursor: pointer;
+}
+
+.projet_details{
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.7s ease-out, opacity 0.45s ease, transform 0.7s ease-out;
+    will-change: max-height, opacity, transform;
+}
+.is-open{
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section div > div article{
@@ -59,21 +104,22 @@ a{
     color: black;
     text-decoration: none;
     width: 120px;
-    font-size: 1.1rem;
+    font-size: 16px;
 }
 
 section > a > article{
     background-color: white;
     color : black;
     text-align: center;
-    width: 100%;
-    border: 1px solid rgb(44, 43, 43);
-    transition: background-color 0.5s ease, color 0.5s ease;
+    width: 150px;
+    border: 2px dashed rgb(44, 43, 43);
+    transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in;
 }
 
 section > a >article:hover{
     background-color: black;
     color: white;
+    border: 2px dashed white;
 }
 
 article ul{
@@ -102,7 +148,7 @@ footer ul {
 }
 
 p{
-    font-size: 1.1rem;
+    font-size: 16px;
 }
 
 footer ul li{

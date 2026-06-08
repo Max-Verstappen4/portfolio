@@ -55,12 +55,10 @@ section > div > article:first-child{
 }
 
 #projet{
-    max-height: 400px;
+    max-height: 420px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
-    padding-bottom: 320px;
-    scroll-padding-bottom: 320px;
 }
 #projet::-webkit-scrollbar{
     display: none;
@@ -73,10 +71,17 @@ section > div > article:first-child{
     scroll-snap-align: start;
 }
 
+
+section h2{
+    margin: 10px 0;
+    color: #212121d8;
+    scroll-margin-top: 12px;
+}
+
 #projet > h2.selectione{
     margin: 0 0 0 25px;
     color: #000000;
-    font-size: 1.9em;
+    font-size: 1.6em;
     cursor: pointer;
 }
 
@@ -88,6 +93,12 @@ section > div > article:first-child{
     transform: translateY(-6px);
     transition: max-height 0.7s ease-out, opacity 0.45s ease, transform 0.7s ease-out;
     will-change: max-height, opacity, transform;
+}
+.projet_details{
+    padding: 0 0 16px 10px;
+}
+.projet_details > ul{
+    margin: 0 0 0 15px;
 }
 .is-open{
     max-height: 500px;
